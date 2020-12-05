@@ -1,4 +1,4 @@
-import numpy as mp
+import numpy as np
 
 f = open("day04_input.txt", "r")
 

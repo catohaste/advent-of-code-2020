@@ -36,11 +36,8 @@ for idx in range(1,len(adapters)):
     ok_origins = [option for option in origin_options if option in adapters]
 
     # print(adapters[idx], origin_options, ok_origins)
-    count = 0
     for origin in ok_origins:
-        count += count_ways[origin]
-    
-    count_ways[adapters[idx]] = count
+        count_ways[adapters[idx]] += count_ways[origin]
     
 print(count_ways[adapters[-1]])
     
